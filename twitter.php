@@ -43,7 +43,7 @@ exit();
 		$get = file_get_contents('status.txt');
 $ur = 'https://api.twitter.com/1.1/search/tweets.json';
 $gets = $get . $maxid;
-$url = $ur . $gets;
+$url = $ur . $gets . '&tweet_mode=extended';
 $ch = curl_init($url);  
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 curl_setopt($ch, CURLOPT_HTTPHEADER, array($twAuth)); 
