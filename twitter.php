@@ -48,6 +48,7 @@ $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 curl_setopt($ch, CURLOPT_HTTPHEADER, array($twAuth)); 
 $res = curl_exec($ch);
+file_put_contents('log.json', $res);
 $tweets = json_decode($res);
 //echo $res;
 $x = 50;
