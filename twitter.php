@@ -58,7 +58,7 @@ echo $url;
 file_get_contents("https://api.telegram.org/$tgBotKey/sendMessage?chat_id=32709704&text=$url");
 while ($x >= 0) {
 	if ($tweets->statuses[$x]->id_str > $max) {
-$text = $tweets->statuses[$x]->text;
+$text = $tweets->statuses[$x]->full_text;
 //$text = $tweets->statuses[$x]->retweeted_status->text;
 //$op = $tweets->statuses[$x]->retweeted_status->user->screen_name;
 $named = $tweets->statuses[$x]->user->name;
